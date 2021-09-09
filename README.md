@@ -1,18 +1,32 @@
-## My Project
+# Deploying applications with Codefresh
 
-TODO: Fill this README out!
+### Welcome
 
-Be sure to:
+Codefresh is a DevOps automation platform designed to support GitOps with support for Kubernetes, Terraform, and advanced deployment methodologies such as Canary and Blue Green.
 
-* Change the title in this README
-* Edit your repository description on GitHub
+In this workshop you will learn about GitOps deployments in a cloud environment
+and more specifically on Amazon Elastic Kubernetes service.
 
-## Security
+### Expected Duration
 
-See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
+ * 2-3 Hours
 
-## License Summary
+### Who should take this workshop?
 
-The documentation is made available under the Creative Commons Attribution-ShareAlike 4.0 International License. See the LICENSE file.
+* Devops Engineers
+* Cloud Architects
+* Release managers
+* Service engineers
+* Developers
+* Platform engineers
 
-The sample code within this documentation is made available under the MIT-0 license. See the LICENSE-SAMPLECODE file.
+### What we will cover in this workshop
+
+* Creating a basic packaging pipeline that creates a container from your application source code
+* Adding unit tests and security checks in the basic pipeline to ensure quality 
+and security of the container
+* Installing a GitOps agent to your cluster
+* Performing releases by Git actions
+* Monitoring deployments, viewing release history and rolling back to previous versions.
+
+Some experience/knowledge with AWS and Kubernetes/containers is helpful but the workshop will provide instructions to run through the workshop with no issues and if you are attending one of our live workshop sessions there will be folks to help assist with issues that come up. 
