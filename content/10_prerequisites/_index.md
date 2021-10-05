@@ -13,6 +13,11 @@ Before you can start the workshop you need to setup free accounts with the follo
 - Create an [AWS account](https://aws.amazon.com/free/)
 - Create a [Codefresh account](https://codefresh.io/docs/docs/getting-started/create-a-codefresh-account/)
 
+{{% notice warning %}}
+When creating a Codefresh account, be sure to choose Github
+as your authentication provider. This will automatically add an integration with Github that we will use later on in our pipelines.
+{{% /notice %}}
+
 Then follow the instructions to install the CLI tools
 as explained in the next sections:
 
