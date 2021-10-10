@@ -1,7 +1,7 @@
 +++
 title = "Install Codefresh CLI"
 chapter = false
-weight = 13
+weight = 14
 +++
 
 The Codefresh command-line tool, [codefresh](https://codefresh-io.github.io/cli/), allows you to manage your Codefresh deployments from your terminal

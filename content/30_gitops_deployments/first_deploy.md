@@ -40,7 +40,7 @@ Fill in the details.
 * Path: `./simple-java-app`
 * Cluster: "in cluster"
 * Namespace: "default"
-* Directory recurse: true
+* Directory recurse: false
 
 ![Adding the application](/images/gitops/add-application.png)
 

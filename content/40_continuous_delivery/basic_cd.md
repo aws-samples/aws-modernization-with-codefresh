@@ -49,8 +49,8 @@ steps:
     image_name: <your docker username>/my-app-image
     working_directory: ./
     tags:
-    - "${{CF_SHORT_REVISION}}"
-    - latest
+      - "${{CF_SHORT_REVISION}}"
+      - latest
     dockerfile: Dockerfile
     registry: dockerhub
   scan_image:
@@ -64,7 +64,7 @@ steps:
     stage: verify
     image: maven:3.5.2-jdk-8-alpine
     commands:
-     - mvn -Dmaven.repo.local=/codefresh/volume/m2_repository verify -Dserver.host=http://my-spring-app 
+      - mvn -Dmaven.repo.local=/codefresh/volume/m2_repository verify -Dserver.host=http://my-spring-app 
     services:
       composition:
         my-spring-app:
@@ -76,7 +76,13 @@ steps:
         periodSeconds: 15
         image: byrnedo/alpine-curl
         commands:
-          - "curl http://my-spring-app:8080/"    
+          - "curl http://my-spring-app:8080/"
+  clear_gitops_cache:
+    title: Clear any unpushed changes
+    stage: "gitops"
+    image: maven:3.5.2-jdk-8-alpine
+    commands:
+      - rm -rf /codefresh/volume/aws-gitops-app-manifests
   clone_gitops:
      title: cloning gitops repo
      type: git-clone
