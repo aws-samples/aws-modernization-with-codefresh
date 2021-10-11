@@ -6,7 +6,7 @@ weight: 1
 
 # AWS Modernization Workshop with GitOps and Codefresh
 
-![image](https://drive.google.com/uc?export=view&id=0B9pBIIcsND5Cam5la3QxaDFVakk)
+![image](https://codefresh.io/wp-content/themes/codefresh-2019/dist/images/logo.svg)
 
 ### Welcome
 

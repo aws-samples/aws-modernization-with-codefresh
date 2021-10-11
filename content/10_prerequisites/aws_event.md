@@ -5,9 +5,7 @@ weight: 10
 ---
 
 
-To complete this workshop, you are provided with an AWS account via the AWS Event Engine service. A 12-digit hash will be provided to you by event staff - this is your unique access code. eg:
-
-## `e8476543c00e`
+To complete this workshop, you are provided with an AWS account via the AWS Event Engine service. A 12-digit hash will be provided to you by event staff - this is your unique access code. 
 
 ### Create AWS Account
 
