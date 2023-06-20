@@ -15,8 +15,8 @@ At the terminal command prompt, enter the following commands:
 
 ```
 cd /tmp
-wget https://github.com/codefresh-io/cli/releases/download/v0.75.26/codefresh-v0.75.26-linux-x64.tar.gz
-tar zxvf codefresh-v0.75.26-linux-x64.tar.gz
+wget https://github.com/codefresh-io/cli/releases/download/v0.84.2/codefresh-v0.84.2-linux-x64.tar.gz
+tar zxvf codefresh-v0.84.2-linux-x64.tar.gz
 ```
 
 This download the CLI locally. To install and use it:

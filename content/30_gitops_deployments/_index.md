@@ -1,5 +1,5 @@
 +++
-title = "2.  GitOps Deployments"
+title = "3.  GitOps Deployments"
 chapter = true
 weight = 30
 +++
