@@ -1,7 +1,7 @@
 +++
 title = "Launching an EC2 instance"
 chapter = false
-weight = 26
+weight = 27
 +++
 
 Now that we have an VM image we can launch it with the [aws cli](https://aws.amazon.com/cli/).
