@@ -72,6 +72,10 @@ You can manually build an image with
 	packer build aws-packer-example.pkr.hcl
 ```
 
+If you visit your AWS Console you should now see your new image:
+
+![New AMI](/images/ec2/ami-created.png)
+
 We will however automated this with a Codefresh pipeline as we will see later in this section.
 
 

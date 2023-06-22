@@ -36,6 +36,10 @@ aws ec2 run-instances --image-id $IMAGE_ID --count 1 --no-cli-pager --instance-t
 The first command find the AMI id of any image by name (`my-own-ami` in the example).
 The second command launches a VM using that AMI ID
 
+If you visit the AWS Console you will now see your instance running:
+
+![Running instance](/images/ec2/running-instance.png)
+
 While you can run [manually these commands in your terminal](
   https://github.com/codefresh-contrib/aws-workshop-demos/blob/main/ec2-deploy/launch-it.sh
 ) we will also automate this process using Codefresh.
