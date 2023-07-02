@@ -16,14 +16,16 @@ In a cloud environment, problematic deployment methods can quickly become the bo
 doesn't always mean that your application developers can take advantage
 of the new infrastructure in the most optimal way.
 
-In this workshop you will learn about GitOps deployments in a cloud environment
-and more specifically on Amazon Elastic Kubernetes service.
+In this workshop you will learn about deployments in a cloud environment
+and more specifically on Amazon Elastic Computing Cloud (EC2) Amazon Elastic Kubernetes service (EKS)
 
 We will guide you through the following steps
 
 * Creating a basic packaging pipeline that creates a container from your application source code
 * Adding unit tests and security checks in the basic pipeline to ensure quality 
 and security of the container
+* Deploying an application to EC2
+* Setting up Continuous Delivery to Kubernetes
 * Installing a GitOps agent to your cluster
 * Performing releases by Git actions
 * Monitoring deployments, viewing release history and rolling back to previous versions.

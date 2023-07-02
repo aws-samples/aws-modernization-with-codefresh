@@ -15,10 +15,12 @@ from source code to deployment using Kubernetes on AWS.
 
 ### Learning Objectives
 - Deploy Cloud9 as an IDE for completing workshop exercises.
-- Learn about GitOps deployments
-- Create an EKS cluster
 - Setup a Continuous Integration pipeline to create a container
-- Learn about Continuous Delivery with Kubernetes and GitOps
+- Deploy an application to a virtual machine powered by EC2
+- Create an EKS cluster
+- Learn about Continuous Delivery with Kubernetes 
+- Learn about GitOps deployments
+- Perform GitOps deployments to Kubernetes
 
 {{% notice warning %}}
 <p style='text-align: left;'>

@@ -1,5 +1,5 @@
 +++
-title = "3.  Continuous Delivery"
+title = "4.  Continuous Delivery"
 chapter = true
 weight = 40
 +++
