@@ -13,7 +13,7 @@ virtual machines in the form of [Amazon EC2](https://aws.amazon.com/ec2/). With 
 
 In theory you could visit the Amazon Console, create a virtual machine by clicking buttons and drop-downs, and while this would work in a small scale, it should never be used in production.
 
-We will instead automate the process of creating virtual machine and deploying software on them using the [Packer open source project](https://www.packer.io/) and the [aws cli](https://aws.amazon.com/cli/).
+We will instead automate the process of creating virtual machines and deploying software on them using the [Packer open source project](https://www.packer.io/) and the [aws cli](https://aws.amazon.com/cli/).
 
 {{% children showhidden="false" %}}
 
