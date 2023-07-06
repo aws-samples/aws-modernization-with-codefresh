@@ -21,7 +21,6 @@ Your Cloud9 environment will have access to the same AWS resources as the user w
 2. Select **Create environment**.
 
 3. Enter `gitops-workshop` into **Name** and optionally provide a **Description**.
-
 ![Step 5](/images/cloud9/c9-step5.png)
 
 4. Select **Next step**.
@@ -30,20 +29,33 @@ Your Cloud9 environment will have access to the same AWS resources as the user w
 - Set the *Instance type* to **t2.micro (1 GiB RAM + 1 vCPU)**.
 - Leave all other defaults unchanged.
 
-![Step 6](/images/cloud9/c9-step6.png)
-
 6. Select **Next step**.
 
 7. Review the environment settings and select **Create environment**. It will take a couple of minutes for your Cloud9 environment to be provisioned and prepared.
 
+## Configure Cloud9 IDE environment
+
+When the environment comes up, customize the environment by:
+
+1 . Close the **welcome page** tab
+
+2 . Close the **lower work area** tab
+
+3 . Open a new **terminal** tab in the main work area.
+
+4 . Hide the left-hand environment explorer by clicking on the left side **environment** tab.
+
+
+{{% notice tip %}}
+If you don't like this dark theme, you can change it from the **View / Themes** Cloud9 workspace menu.
+{{% /notice %}}
+
 ## Setting up Cloud9 IDE
 
 1. Once ready, your IDE will open to a welcome screen. Below that, you should see a terminal prompt. Close the Welcome tab and drag up the terminal window to give yourself more space to work in. 
-
+    - You can run AWS CLI commands in here just like you would on your local computer. Remember for this workshop to run all commands within the Cloud9 terminal window rather than on your local computer.
+    - Keep your AWS Cloud9 IDE opened in a browser tab throughout this workshop.
 ![Step 7](/images/cloud9/c9-step7.png)
-
-- You can run AWS CLI commands in here just like you would on your local computer. Remember for this workshop to run all commands within the Cloud9 terminal window rather than on your local computer.
-- Keep your AWS Cloud9 IDE opened in a browser tab throughout this workshop.
 
 2. Verify that your user is logged in by running the command `aws sts get-caller-identity`. Copy and paste the command into the Cloud9 terminal window. 
 

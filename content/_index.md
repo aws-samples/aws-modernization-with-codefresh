@@ -1,20 +1,19 @@
 ---
-title: "AWS Modernization Workshop"
+title: "AWS Modernization Workshop with Codefresh"
 chapter: true
 weight: 1
 ---
 
-# AWS Modernization Workshop with GitOps and Codefresh
+# AWS Modernization Workshop with Codefresh
 
 ![image](https://codefresh.io/wp-content/themes/codefresh-2019/dist/images/logo.svg)
 
 ### Welcome
 
-In this workshop you will learn about GitOps and setup a complete delivery process
-from source code to deployment using Kubernetes on AWS. 
+In this workshop you will learn about continuos delivery and GitOps with Codefresh, and how setup a complete delivery process from your application source code to production deployment using Kubernetes on AWS, both self-hosted on Amazon EC2 (EC2) and using Amazon ELastic Kubernetes Service (EKS).
 
 ### Learning Objectives
-- Deploy Cloud9 as an IDE for completing workshop exercises.
+- Deploy Cloud9 as an IDE for completing workshop exercises
 - Setup a Continuous Integration pipeline to create a container
 - Deploy an application to a virtual machine powered by EC2
 - Create an EKS cluster

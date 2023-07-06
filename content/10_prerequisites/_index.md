@@ -10,7 +10,7 @@ Before you can start the workshop you need to setup free accounts with the follo
 
 - Create a [GitHub account](https://github.com/join)
 - Create a [DockerHub account](https://hub.docker.com/)
-- Create an [AWS account](https://aws.amazon.com/free/)
+- Create an [AWS account](https://aws.amazon.com/free/) if you running at self-paced mode, or follow [At AWS Event]({{< ref "aws_event.md" >}}) to get a free temporary one
 - Create a [Codefresh account](https://codefresh.io/docs/docs/getting-started/create-a-codefresh-account/)
 
 {{% notice warning %}}

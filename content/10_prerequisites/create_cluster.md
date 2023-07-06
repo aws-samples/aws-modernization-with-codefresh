@@ -1,10 +1,8 @@
 ---
 title: "Create an EKS Cluster"
-chapter: true
+chapter: false
 weight: 13
 ---
-
-## Create an EKS Cluster
 
 Amazon EKS, also known as [Elastic Kubernetes Service](https://aws.amazon.com/eks/) is AWS' managed Kubernetes service. Provisioning an EKS Cluster is very simple and can be done with 2 steps: installing [eksctl](https://docs.aws.amazon.com/eks/latest/userguide/getting-started-eksctl.html) and using eksctl to create the cluster! eksctl is command line utility created for managing Kubernetes clusters on Amazon EKS.
 
