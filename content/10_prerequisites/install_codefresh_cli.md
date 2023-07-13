@@ -4,32 +4,32 @@ chapter = false
 weight = 14
 +++
 
-The Codefresh command-line tool, [codefresh](https://codefresh-io.github.io/cli/), allows you to manage your Codefresh deployments from your terminal
+The Codefresh command-line tool, [codefresh](https://github.com/codefresh-io/cli-v2), allows you to manage your Codefresh deployments from your terminal
 
 ## Installing the Codefresh CLI
 
-Find your version by looking at the [latest releases](https://codefresh-io.github.io/cli/installation/download/).
+Find your version by looking at the [latest releases](https://github.com/codefresh-io/cli-v2/releases).
 
 
 At the terminal command prompt, enter the following commands:
 
 ```
 cd /tmp
-wget https://github.com/codefresh-io/cli/releases/download/v0.84.2/codefresh-v0.84.2-linux-x64.tar.gz
-tar zxvf codefresh-v0.84.2-linux-x64.tar.gz
+wget https://github.com/codefresh-io/cli-v2/releases/latest/download/cf-linux-amd64.tar.gz
+tar zxvf cf-linux-amd64.tar.gz
 ```
 
 This download the CLI locally. To install and use it:
 
 ```
-chmod +x ./codefresh
-sudo mv ./codefresh /usr/local/bin/codefresh
+chmod +x ./cf
+sudo mv ./cf /usr/local/bin/cf
 ```
 
-This will install `codefresh` in your **Cloud9** environment. To test to make sure the command is installed properly, execute the command:
+This will install `cf` in your **Cloud9** environment. To test to make sure the command is installed properly, execute the command:
 
 ```
-codefresh version 
+cf version 
 ```
 
 You should see the `codefresh` version message.
@@ -37,7 +37,7 @@ You should see the `codefresh` version message.
 ## Connecting your CLI with your Codefresh account
 
 To connect your Codefresh CLi with your own account you need to [setup 
-authentication](https://codefresh.io/docs/docs/integrations/codefresh-api/#authentication-instructions).
+authentication](https://codefresh.io/docs/docs/installation/gitops/upgrade-gitops-cli/#download-the-gitops-cli).
 
 Sign in Codefresh and visit your user settings at [https://g.codefresh.io/user/settings](https://g.codefresh.io/user/settings)
 
@@ -53,7 +53,7 @@ Finally click the *Create* button in the dialog and make sure to copy the API To
 Then in your terminal enter the following:
 
 ```
-codefresh auth create-context --api-key <your_key_here>
+cf config create-context codefresh --api-key <your_key_here>
 ```
 
 Now the CLI is authenticated against your Codefresh account. 
@@ -61,7 +61,7 @@ Now the CLI is authenticated against your Codefresh account.
 Type 
 
 ```
-codefresh get context
+cf get context
 ```
 
 to verify the authentication.
