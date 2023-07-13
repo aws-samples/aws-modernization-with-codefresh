@@ -1,7 +1,7 @@
 +++
 title = "The GitOps dashboard"
 chapter = false
-weight = 32
+weight = 33
 +++
 
 In the previous section we have briefly seen the GitOps dashboard offered by Codefresh
