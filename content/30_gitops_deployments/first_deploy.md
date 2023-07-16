@@ -1,14 +1,12 @@
 +++
 title = "Your first deployment"
 chapter = false
-weight = 22
+weight = 32
 +++
 
 
-
-The first step is to create an application in the Codefresh UI.
-
-Fork the following repository in your GitHub account https://github.com/codefresh-contrib/aws-gitops-app-manifests.
+Fork the following repository in your GitHub account https://github.com/codefresh-contrib/aws-workshop-demos. The application we are going to deploy
+is in the `simple-helm-chart` folder.
 
 It is a [simple Helm chart](https://helm.sh/) (the package manager for Kubernetes) that contains two manifests, one for the application and one for the Kubernetes service.
 
@@ -25,55 +23,43 @@ image:
   tag: latest
 ```  
 
+Click on “Applications” from the left sidebar in the Codefresh UI and then select the “Add application” button on top right.
 
-Then in the Codefresh UI click on *GitOps* on the left sidebar. Click the *Add application* button and in the middle of the dialog choose the *Provision a new application* tab.
+![Adding the application](/images/gitops_first_deploy/add-application.png)
+
+Enter a name for your application and make sure to select `codefresh-hosted` as the runtime.
+
+In the next screen you can define your application details, and in the “destination” section you can choose your target deployments clusters that are managed by the hosted runtime.
+
+![Adding the application](/images/gitops_first_deploy/add-settings.png)
+
 
 Fill in the details.
 
-* Name: `GitOps example`
-* GitOps integration: Should be preselected
-* Project: default
-* Application: `my-java-app`
-* Manual/Automatic toggle: Choose automatic
-* Repository URL: `https://github.com/<your github>/aws-gitops-app-manifests`
+* Repository URL: `https://github.com/<your github>/aws-workshop-demos`
 * Revision: HEAD
 * Path: `./simple-java-app`
-* Cluster: "in cluster"
+* Cluster: `<your eks cluster>`
 * Namespace: "default"
 * Directory recurse: false
 
-![Adding the application](/images/gitops/add-application.png)
+Remember that everything in Codefresh is committed to Git and that behind the scenes the platform is powered by the Argo family of tools.
 
-Click the *Create* button and wait for the first deployment to take place.
-At this point Codefresh is instructing your cluster to match the cluster
-state with the manifests in Git.
+After you define your application settings, the UI will ask you to commit your changes and will also show the auto-generated ArgoCD application that will be added to your Git repository (as defined in the previous section).
 
-After a while your application will be deployed and you should see a "Healthy"
-status in the dashboard.
+![First deployment](/images/gitops_first_deploy/first-deployment.png)
 
-![Healthy status](/images/gitops/healthy.png)
+And that’s it! A sync process will start and your application will be deployed to your EKS cluster.
 
- {{% notice note %}}
-For simplicity reasons we deploy the application to the "default" namespace of the cluster. It is also possible to choose other namespaces for different applications.
-{{% /notice %}}
+## Inspecting your application
 
-## Viewing the deployed application
+You can monitor your deployment back in the Application dashboard that shows a list of all your active applications from all Argo/Codefresh instances that you have. If you have a large number of Argo instances, you can filter for the hosted runtime by selecting it from the drop-down on the runtime filter (top left of the screen).
 
-The application is now deployed in the cluster and is exposed via a Kubernetes service.
-To find out the IP of the service you can click on the application row
-in the GitOps dashboard and then in the next screen, choose the *Services* tab.
-
-![Services tab](/images/gitops/services.png)
-
-This screen shows all exposed services that your application defines. Under the *Endpoint* column you will see the IP address of the service (it is different for each deployment).
-
-Click on the URL and you should see the application on your browser.
+![Application dashboard](/images/gitops_first_deploy/applications.png)
 
 
-![Running application](/images/gitops/app.png)
+Afterwards you can click on the application and get access to all the usual dashboards available to applications managed by Codefresh.
 
-
-Congratulations! 
 
 
 ## Deploying a new version
@@ -82,9 +68,9 @@ The first deployment is now active. To see how GitOps works in practice, we will
 
 The main concept of GitOps is that ALL operations are happening via Git. 
 
-To create a new application version make a change in GitHub in the `aws-gitops-app/src/main/java/sample/actuator/HelloWorldService.java` file.
+To create a new application version make a change in GitHub in the `aws-workshop-demos/simple-java-app/src/main/java/sample/actuator/HelloWorldService.java` file.
 
-![Application change](/images/gitops/app-change.png)
+![Application change](/images/gitops_first_deploy/app-change.png)
 
 The exact change is not really important. Feel free to change the hello world message to something else (but keep the word "Spring" as it is checked by a Unit test).
 
@@ -94,22 +80,21 @@ before actually accepting the change.
 {{% /notice %}}
 
 
-
 Commit and push your change and then click on the *Builds* section on the left sidebar in the Codefresh UI. Codefresh will automatically launch a pipeline to create a docker image as was described in the previous section.
 
-![Edit new version](/images/gitops/git-change-app.png)
+![Edit new version](/images/gitops_first_deploy/git-change-app.png)
 
 After the pipeline has finished a new Docker image will be created. Click on *Images* on the left sidebar and click on "my-app-image".
 
 In the Activity column note down the last tag of the container image.
 
-![Create image](/images/gitops/image-tag.png)
+![Create image](/images/gitops_first_deploy/image-tag.png)
 
 In the example above it is `docker.io/kostiscodefresh/my-app-image:385643c`
 
-Now in Github go to your second Git repository that contains the Kubernetes manifests (and not the application source code). Edit the file `aws-gitops-app-manifests/blob/main/simple-java-app/values.yaml` and enter your new container tag.
+Now in Github go to your second folder that contains the Kubernetes manifests (and not the application source code). Edit the file `aws-workshop-demos/blob/main/simple-java-app/values.yaml` and enter your new container tag.
 
-![Edit new version](/images/gitops/new-version-manual.png)
+![Edit new version](/images/gitops_first_deploy/new-version-manual.png)
 
 Commit your changes and after a brief amount of time, Codefresh GitOps will fetch the new container image. If you now visit your application endpoint in your browser 
 you will see the new status message. If you don't remember your endpoint URL go back to your GitOps dashboard, click on your application and then find your endpoint
