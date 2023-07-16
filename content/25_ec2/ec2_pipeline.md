@@ -40,7 +40,7 @@ steps:
     type: "git-clone"
     repo: "codefresh-contrib/aws-workshop-demos"
     revision: "main"
-    git: "github-1"
+    git: "github"
     stage: "prepare"
 
   BuildMyApp:
@@ -91,9 +91,9 @@ Once you run the pipeline and the EC2 Image is launched, you can connect to it w
 
 ![Preview app](/images/ec2/running-app.png)
 
-This concludes the CD section for EC2. You have now setup a CD pipeline that creates an EC2 instance with your application. If you change the source code of the application the pipeline will run again and a new version will be deployed.
+This concludes the Continuous Deployment (CD) section for EC2. You have now setup a CD pipeline that creates an EC2 instance with your application. If you change the source code of the application the pipeline will run again and a new version will be deployed.
 
-You can of course expand the pipeline to deploy to other regions, run security scans first, perform load testing etc.
+You can of course expand the pipeline to deploy to other regions, run security scans first, perform load testing and etc.
 
 
 

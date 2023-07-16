@@ -1,11 +1,14 @@
 ---
-title: "At an AWS Event"
+title: "1. At an AWS Event"
 chapter: false
 weight: 10
 ---
 
-
 To complete this workshop, you are provided with an AWS account via the AWS Event Engine service. A 12-digit hash will be provided to you by event staff.
+
+{{% notice note%}}
+You are welcome to use your own AWS account. In this case you will need to provision EKS cluster
+{{% /notice %}}
 
 ### Create AWS Account
 
