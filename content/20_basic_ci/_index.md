@@ -10,7 +10,7 @@ Continuous Integration is the process where for each commit, the source code is 
 
 As a minimum the code should be compiled/minified but you may have other optional stages such as unit tests, linters, security scanning, integration tests and so on.
 
-In this section we will setup Continuous Integration with Codefresh for [the example application at Git](https://github.com/codefresh-contrib/aws-gitops-app)
+In this section we will setup Continuous Integration with Codefresh for [the example application at Git](https://github.com/codefresh-contrib/aws-workshop-demos/tree/main/simple-java-app)
 
 {{% children showhidden="false" %}}
 
