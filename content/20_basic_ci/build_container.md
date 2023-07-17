@@ -65,7 +65,7 @@ steps:
     type: build
     stage: package
     image_name: <your docker username>/my-app-image
-    working_directory: ./
+    working_directory: ./simple-java-app
     tags:
     - "${{CF_SHORT_REVISION}}"
     - latest
