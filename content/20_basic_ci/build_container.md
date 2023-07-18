@@ -18,7 +18,7 @@ This is the pipeline that we will create:
 
 First fork the example application so that it resized in your own Github account:
 
-- Go to [https://github.com/codefresh-contrib/aws-gitops-app](https://github.com/codefresh-contrib/aws-gitops-app) and click on the fork button.
+- Go to [https://github.com/codefresh-contrib/aws-workshop-demos](https://github.com/codefresh-contrib/aws-workshop-demos) and click on the fork button.
 ![Create a Github fork](/images/basic_ci/fork.png)
 
 - Wait a bit until Github says that the fork is finished.
@@ -65,7 +65,7 @@ steps:
     type: build
     stage: package
     image_name: <your docker username>/my-app-image
-    working_directory: ./
+    working_directory: ./simple-java-app
     tags:
     - "${{CF_SHORT_REVISION}}"
     - latest
