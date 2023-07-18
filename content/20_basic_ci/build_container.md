@@ -46,7 +46,8 @@ Codefresh pipelines are grouped under projects. Project names can be anything yo
 
 Codefresh has already created a sample pipeline which we will not use for this tutorial. You will create a very simple pipeline that checks out the source code and builds a docker image. 
 
-- Delete the existing contents on the editor and paste the following:
+Delete the existing contents on the editor and paste the following:
+
 ```yaml
 version: '1.0'
 stages:
@@ -71,7 +72,8 @@ steps:
     - latest
     dockerfile: Dockerfile
     registry: dockerhub
- ```     
+ ```   
+   
  {{% notice note %}}
 Remember to replace `<your docker username>` with your own Dockerhub username. Notice also the `registry` property that tells Codefresh where to push the image after it is built. This is the name of the Dockerhub integration that we setup in the previous section ("Connect Registry").
 {{% /notice %}}
