@@ -24,7 +24,8 @@ eksctl version
 eksctl create cluster \
 --name basic-eks \
 --region us-east-1 \
---zones us-east-1a,us-east-1b
+--zones us-east-1a,us-east-1b \
+--version 1.27
 ```
 
 {{% notice tip %}}
