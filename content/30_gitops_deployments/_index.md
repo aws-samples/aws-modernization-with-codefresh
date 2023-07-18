@@ -18,7 +18,7 @@ The Key GitOps Principles:
 
 In the case of Kubernetes, GitOps deployments happen in the following manner
 
-1. A GitOps agent is deployed on the cluster
+1. A GitOps agent agent is created, in this case we'll be using Argo CD hosted by Codefresh
 2. The GitOps agent is monitoring one or more Git repositories that define applications and contain Kubernetes manifests (or Helm charts or Kustomize files)
 3. Once a Git commit happens the GitOps agent is instructing the cluster
 to reach the same state as what is described in Git
