@@ -1,5 +1,5 @@
 ---
-title: "At your own AWS account: Create an EKS Cluster"
+title: "Create an EKS Cluster"
 chapter: false
 weight: 15
 ---
