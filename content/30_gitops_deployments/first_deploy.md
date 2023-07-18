@@ -10,7 +10,7 @@ is in the `simple-helm-chart` folder.
 
 It is a [simple Helm chart](https://helm.sh/) (the package manager for Kubernetes) that contains two manifests, one for the application and one for the Kubernetes service.
 
-After you fork the repository, edit the file `simple-java-app/values.yaml`
+After you fork the repository, edit the file `simple-helm-chart/values.yaml`
 and change the `repository` line to your own `<dockerhub id>`.
 
 ```yaml
@@ -38,7 +38,7 @@ Fill in the details.
 
 * Repository URL: `https://github.com/<your github>/aws-workshop-demos`
 * Revision: HEAD
-* Path: `./simple-java-app`
+* Path: `./simple-helm-chart`
 * Cluster: `<your eks cluster>`
 * Namespace: "default"
 * Directory recurse: false
@@ -92,7 +92,7 @@ In the Activity column note down the last tag of the container image.
 
 In the example above it is `docker.io/kostiscodefresh/my-app-image:385643c`
 
-Now in Github go to your second folder that contains the Kubernetes manifests (and not the application source code). Edit the file `aws-workshop-demos/blob/main/simple-java-app/values.yaml` and enter your new container tag.
+Now in Github go to your second folder that contains the Kubernetes manifests (and not the application source code). Edit the file `aws-workshop-demos/blob/main/simple-helm-chart/values.yaml` and enter your new container tag.
 
 ![Edit new version](/images/gitops_first_deploy/new-version-manual.png)
 
